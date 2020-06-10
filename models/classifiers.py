@@ -11,6 +11,7 @@ def Xavier(m):
         m.weight.data.uniform_(-a, a)
         m.bias.data.fill_(0.0)
 
+
 class SimpleNet_3x3(nn.Module):
     def __init__(self):
         super(SimpleNet_3x3, self).__init__()
