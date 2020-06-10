@@ -1,6 +1,6 @@
 # Meta-Consolidation for Continual Learning 
 
-We herein share the code to replicate all experiments with Split MNIST dataset.
+We herein share the code to replicate experiments with Split MNIST dataset.
 
 #### Usage
 
