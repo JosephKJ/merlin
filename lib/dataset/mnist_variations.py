@@ -60,7 +60,7 @@ class MNIST(data.Dataset):
                 cfg.continual.rebuild_dataset = False
             variation_data = torch.load(save_location)
         elif cfg.continual.task == 'split_mnist':
-            save_location = os.path.join(path, 'processed', 'split_mnist_2.pt')
+            save_location = os.path.join(path, 'processed', 'split_mnist.pt')
             if not os.path.exists(save_location) or cfg.continual.rebuild_dataset:
                 self.create_split_mnist(path, save_location)
                 cfg.continual.rebuild_dataset = False

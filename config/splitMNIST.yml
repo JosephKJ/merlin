@@ -2,7 +2,7 @@
 run_label: 'split_MNIST'
 gpu_ids: '0'
 verbose: False
-seed: 100
+seed: 9
 model: 'SimpleNet_FC_100'
 
 # Base-model Training Dynamics
