@@ -1,7 +1,15 @@
 import torch.nn as nn
 import torch.nn.functional as F
-from lib.baselines.common import Xavier
+import math
 
+
+def Xavier(m):
+    if m.__class__.__name__ == 'Linear':
+        fan_in, fan_out = m.weight.data.size(1), m.weight.data.size(0)
+        std = 1.0 * math.sqrt(2.0 / (fan_in + fan_out))
+        a = math.sqrt(3.0) * std
+        m.weight.data.uniform_(-a, a)
+        m.bias.data.fill_(0.0)
 
 class SimpleNet_3x3(nn.Module):
     def __init__(self):

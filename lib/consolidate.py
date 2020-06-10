@@ -3,7 +3,6 @@ from lib.config import cfg
 from models.chunked_vae import CHUNKED_VAE
 from lib.utils import log, one_hot, compute_offset
 from lib.recall import recall, construct_state_dict_from_weights
-from lib.baselines.common import Xavier
 from lib.recall import evaluate_classification_model
 from lib.dataset.mnist_variations import MNIST
 import math
@@ -68,7 +67,7 @@ def train_vae(task, observed_tasks):
     log('Saved the mean and log_var of the prior for task %d to: %s' % (task, prior_location))
 
     if num_epochs != 0:
-        log('Regularising.')
+        log('Consolidating.')
         for task_id in observed_tasks:
             prior_location = cfg.output_dir + '/pickles/prior_' + str(task_id) + '.pkl'
             prior_mean, prior_log_var = torch.load(prior_location)

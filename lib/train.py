@@ -1,7 +1,6 @@
 from lib.utils import *
 from lib.dataset.mnist_variations import MNIST
 import models.classifiers
-import lib.baselines.common
 from lib.recall import construct_state_dict_from_weights
 import statistics
 import os
@@ -18,12 +17,7 @@ def train_a_task(task, model_id):
     :return:
     """
     # Model
-    if cfg.is_cifar_10:
-        model = getattr(lib.baselines.common, cfg.model)(nclasses=10).to(cfg.device)
-    elif cfg.is_cifar_100 or cfg.is_mini_imagenet:
-        model = getattr(lib.baselines.common, cfg.model)(nclasses=100).to(cfg.device)
-    else:
-        model = getattr(models.classifiers, cfg.model)().to(cfg.device)
+    model = getattr(models.classifiers, cfg.model)().to(cfg.device)
 
     # log(model)
     save_location = cfg.output_dir + '/pickles/' + cfg.continual.task + '_initial_model_weight_task_' + str(task) + '.pkl'
@@ -163,12 +157,7 @@ def finetune(weight, task, tasks_so_far=None, verbose=True):
     :param verbose: T/F
     :return: Finetuned weight vector.
     """
-    if cfg.is_cifar_10:
-        classification_model = getattr(lib.baselines.common, cfg.model)(nclasses=10).to(cfg.device)
-    elif cfg.is_cifar_100 or cfg.is_mini_imagenet:
-        classification_model = getattr(lib.baselines.common, cfg.model)(nclasses=100).to(cfg.device)
-    else:
-        classification_model = getattr(models.classifiers, cfg.model)().to(cfg.device)
+    classification_model = getattr(models.classifiers, cfg.model)().to(cfg.device)
 
     if cfg.verbose:
         log(classification_model)

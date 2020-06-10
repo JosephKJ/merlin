@@ -5,7 +5,6 @@ import random
 
 from lib.config import cfg_from_file
 from lib.utils import *
-from lib.baseline_adpater import run_experiment
 from lib.merlin import learn_continually
 
 import torch
@@ -68,24 +67,6 @@ def main():
 
     if cfg.continual.method.run_merlin:
         learn_continually()
-
-    if cfg.continual.method.run_single_model:
-        run_experiment('single')
-
-    if cfg.continual.method.run_ewc:
-        run_experiment('ewc')
-
-    if cfg.continual.method.run_gem:
-        run_experiment('gem')
-
-    if cfg.continual.method.run_icarl:
-        run_experiment('icarl')
-
-    if cfg.continual.method.run_gss:
-        run_experiment('GSS_IQP_Rehearse')
-
-    if cfg.continual.method.run_gss_greedy:
-        run_experiment('GSS_Greedy')
 
 
 if __name__ == '__main__':

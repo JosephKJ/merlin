@@ -26,12 +26,6 @@ continual:
   validation_samples_per_task: 100
   method:
     run_merlin: True
-    run_single_model: False
-    run_ewc: False
-    run_gem: False
-    run_icarl: False
-    run_gss_greedy: False
-    run_gss: False
   epochs: 1
   n_finetune_epochs: 40
   learning_rate: 0.1
