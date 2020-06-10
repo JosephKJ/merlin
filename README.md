@@ -8,7 +8,7 @@ We herein share the code to replicate experiments with Split MNIST dataset.
 python main.py
 ```
 
-#### Our setting
+#### Requirements
 
 ```shell script
 Python: 3.7.4
