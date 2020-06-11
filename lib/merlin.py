@@ -6,7 +6,6 @@ from lib.utils import log, compute_forgetting
 
 import statistics
 import os
-import time
 
 import torch
 
@@ -25,7 +24,6 @@ def learn_continually():
     observed_tasks = []
     final_accuracies = []
     individual_acc = []
-    now = time.time()
     for task in tasks:
         log('\nLearning task %d.' % task)
         observed_tasks.append(task)
@@ -48,8 +46,3 @@ def learn_continually():
 
     log('Average Accuracy: ' + str(statistics.mean(final_accuracies)))
     log('Forgetting: ' + str(compute_forgetting(individual_acc)))
-
-    days = divmod((time.time() - now), 86400)
-    hours = divmod(days[1], 3600)
-    minutes = divmod(hours[1], 60)
-    log("Time: %i days, %i hours, %i minutes, %i seconds" % (days[0], hours[0], minutes[0], minutes[1]))
