@@ -37,7 +37,7 @@ continual:
 kernels:
   encoder: 'vae'
   latent_dimension: 2
-  epochs: 25 # 25
+  epochs: 25
   learning_rate: 0.0001
   batch_size: 1
   dataset_path: ''
@@ -45,11 +45,11 @@ kernels:
   point_estimate: False
   intermediate_test: False
   ensembling:
-    min_clf_accuracy: 0   # 50
-    max_num_of_models: 10 # 10
+    min_clf_accuracy: 0
+    max_num_of_models: 10
   gamma: 0.0
-  n_pseudo_weights: 10 # 10
-  n_finetune_src_models: 1 # 1
+  n_pseudo_weights: 10
+  n_finetune_src_models: 1
   use_classification_loss: False
   chunking:
     enable: True
