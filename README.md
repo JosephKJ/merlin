@@ -1,4 +1,5 @@
-# Meta-Consolidation for Continual Learning (NeurIPS 2020)
+# Meta-Consolidation for Continual Learning 
+### (NeurIPS 2020)
 
 The ability to continuously learn and adapt itself to new tasks, without losing grasp of already acquired knowledge is a hallmark of biological learning systems, which current deep learning systems fall short of. In this work, we present a novel methodology for continual learning called MERLIN: Meta-Consolidation for Continual Learning.
 We assume that weights of a neural network, for solving task, come from a meta-distribution. This meta-distribution is learned and consolidated incrementally. We operate in the challenging online continual learning setting, where a data point is seen by the model only once.
