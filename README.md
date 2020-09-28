@@ -25,7 +25,7 @@ CUDA Version: 10.1
 #### Citation
 
 ``` 
-@incollection{NIPS2020_8296,
+@incollection{NIPS2020_joseph,
 title = {Meta-Consolidation for Continual Learning},
 author = {K J, Joseph and Balasubramanian, Vineeth},
 booktitle = {Advances in Neural Information Processing Systems 34},
