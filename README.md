@@ -27,10 +27,15 @@ CUDA Version: 10.1
 #### Citation
 
 ``` 
-@incollection{NIPS2020_4741,
-title = {Meta-Consolidation for Continual Learning},
-author = {K J, Joseph and Balasubramanian, Vineeth},
-booktitle = {Advances in Neural Information Processing Systems 34},
-year = {2020}
+@inproceedings{NEURIPS2020_a5585a4d,
+ author = {K J, Joseph and N Balasubramanian, Vineeth},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {14374--14386},
+ publisher = {Curran Associates, Inc.},
+ title = {Meta-Consolidation for Continual Learning},
+ url = {https://proceedings.neurips.cc/paper/2020/file/a5585a4d4b12277fee5cad0880611bc6-Paper.pdf},
+ volume = {33},
+ year = {2020}
 }
 ```
